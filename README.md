@@ -1,10 +1,5 @@
 # MoodlePy
 
-Perfeito — vamos torná-lo mais leve e direto, mas ainda profissional.
-
----
-
-# Moodle Quiz Helper 📝
 
 ## What is this?
 
