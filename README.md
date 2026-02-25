@@ -1,9 +1,6 @@
 # MoodlePy
 
-
-## What is this?
-
-This is a uniproject developed in Python to make creating quizzes in Moodle a lot less painful.
+This is a uni project developed in Python to make creating quizzes in Moodle a lot less painful.
 
 Instead of manually adding questions one by one through the Moodle interface, this tool:
 
