@@ -1,0 +1,40 @@
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text></text>
+    </name>
+    <questiontext format="html">
+      <text></text>
+    </questiontext>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100">
+      <text></text>
+    </answer>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+  </question>
+  <question type="truefalse">
+  	<name>
+  		<text></text>
+  	</name>
+  	<questiontext format="html">
+  		<text></text>
+  	</questiontext>
+	<shuffleanswers>true</shuffleanswers>
+  	<answer fraction="100">
+  		<text></text>
+  	</answer>
+  	<answer fraction="-25">
+  		<text></text>
+  	</answer>
+  </question>
+  
+  
+</quiz>

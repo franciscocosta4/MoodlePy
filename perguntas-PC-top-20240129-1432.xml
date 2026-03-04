@@ -1,0 +1,40 @@
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>1. O que faz a função criar_ficheiro()?</text>
+    </name>
+    <questiontext format="html">
+      <text>Qual é o objetivo da função <code>criar_ficheiro()</code>?></text>
+    </questiontext>
+    <shuffleanswers>true</shuffleanswers>
+    <answer fraction="100">
+      <text>Cria um ficheiro com o nome especificado e escreve conteúdo nele.</text>
+    </answer>
+    <answer fraction="0">
+      <text>Lê o conteúdo de um ficheiro.</text>
+    </answer>
+    <answer fraction="0">
+      <text>Apaga um ficheiro do sistema.</text>
+    </answer>
+    <answer fraction="0">
+      <text>Fecha um ficheiro aberto.</text>
+    </answer>
+  </question>
+  <question type="truefalse">
+  	<name>
+  		<text>Pergunta nº 2</text>
+  	</name>
+  	<questiontext format="html">
+  		<text>PerguntaVF</text>
+  	</questiontext>
+	<shuffleanswers>true</shuffleanswers>
+  	<answer fraction="100">
+  		<text>true</text>
+  	</answer>
+  	<answer fraction="-25">
+  		<text>false</text>
+  	</answer>
+  </question>
+  
+  
+</quiz>

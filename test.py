@@ -1,29 +1,12 @@
 import csv 
-import requests
+import requests 
+import xml.etree.ElementTree as ET
 
+XML_OUTPUT = "quiz.xml"
 
+tree = ET.parse("template.xml")
+root = tree.getroot()
 
-
-
-print(r"""
- __  __                 _ _       ____        
-|  \/  | ___   ___   __| | | ___ |  _ \ _   _ 
-| |\/| |/ _ \ / _ \ / _` | |/ _ \| |_) | | | |
-| |  | | (_) | (_) | (_| | |  __/|  __/| |_| |
-|_|  |_|\___/ \___/ \__,_|_|\___||_|    \__, |
-                                        |___/ 
-
-
-""")
-input("Começar a preencher as perguntas a partir do perguntas.csv? [Sim->enter] ")
-
-url = input("Entre a url onde se encontra o formulario: (ex:https://httpbin.org/post) ").strip()
-
-if url == "":
-    url = "https://httpbin.org/post"
-else:
-    print(f"url escolhida: {url} , enviando as requests")
-    
 with open("perguntas.csv", newline="") as ficheiro: 
     leitor = csv.reader(ficheiro, delimiter=";")
     next(leitor) #! Para a leitura dar skip ao cabeçalho 
@@ -32,24 +15,27 @@ with open("perguntas.csv", newline="") as ficheiro:
         campos = linha.split(";")      # separa pelos ;
         print(campos)                  # ['dado1', 'dado2', 'dado3', ...]
         dados = {
-            "nome" : campos[0], 
-            "email" : campos[1],
-            "idade" : campos[2], 
-            "telefone": campos[3]
+            "id" : campos[0], 
+            "tipo" : campos[1],
+            "dificuldade" : campos[2], 
+            "categoria": campos[3],
+            "pergunta": campos[4],
+            "opcao": campos[5],
+            "correta": campos[6]
         }
-        resp = requests.post(url, data= dados)
-        print(resp.status_code)
-        print(resp.json()) 
+
+# Mapeamento entre dados e XML
+mapeamento = {
+    "nome": "nomeCompleto",
+    "idade": "anos"
+}
 
 
-# dados = {
-#     "nome" : campos[0], 
-#     "email" : campos[1],
-#     "idade" : campos[2], 
-#     "telefone": campos[3]
-# }
+# Preencher campos
+for caminho, valor in dados.items():
+    elemento = root.find(caminho)
+    if elemento is not None:
+        elemento.text = valor
 
-# resp = requests.post(url, data= dados)
-
-# print(resp.status_code)
-# print(resp.json()) 
+# Guardar novo XML
+tree.write(XML_OUTPUT, encoding="utf-8", xml_declaration=True)
