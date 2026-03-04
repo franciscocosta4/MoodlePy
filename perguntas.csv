@@ -1,5 +1,6 @@
-nome;email;idade;telefone
-marta;marques@gmail.com;18;932802482
-francisco;costa@gmail.com;19:93457990
-marta;monteiro@gmail.com;18;93665431
-matheus;fernandes;19@gmail.com;934770119
+id;tipo;dificuldade;categoria;pergunta;opcao;correta
+Q1;MC;facil;Funcoes;O que faz criar_ficheiro()?;Cria ficheiro;1
+Q1;MC;facil;Funcoes;O que faz criar_ficheiro()?;Lê ficheiro;0
+Q1;MC;facil;Funcoes;O que faz criar_ficheiro()?;Apaga ficheiro;0
+Q2;VF;facil;Funcoes;A função open() pode criar ficheiro.;true;1
+Q2;VF;facil;Funcoes;A função open() pode criar ficheiro.;false;0
