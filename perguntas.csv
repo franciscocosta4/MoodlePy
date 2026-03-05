@@ -1,6 +1,6 @@
 id;type;difficulty;category;questiontext;answer;fraction
-Q1;multichoice;facil;Funcoes;O que faz criar_ficheiro()?;Cria ficheiro;100
-Q1;multichoice;facil;Funcoes;O que faz criar_ficheiro()?;Lê ficheiro;0
-Q1;multichoice;facil;Funcoes;O que faz criar_ficheiro()?;Apaga ficheiro;0
-Q2;truefalse;facil;Funcoes;A função open() pode criar ficheiro.;true;100
-Q2;truefalse;facil;Funcoes;A função open() pode criar ficheiro.;false;-25
+Q1;multichoice;1;Funcoes;O que faz criar_ficheiro()?;Cria ficheiro;100
+Q1;multichoice;1;Funcoes;O que faz criar_ficheiro()?;Lê ficheiro;0
+Q1;multichoice;1;Funcoes;O que faz criar_ficheiro()?;Apaga ficheiro;0
+Q2;truefalse;3;Funcoes;A função open() pode criar ficheiro.;true;100
+Q2;truefalse;3;Funcoes;A função open() pode criar ficheiro.;false;-25

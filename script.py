@@ -4,6 +4,16 @@ import xml.etree.ElementTree as ET
 
 caminho_csv = "perguntas.csv"
 
+print(r"""
+ __  __                 _ _       ____        
+|  \/  | ___   ___   __| | | ___ |  _ \ _   _ 
+| |\/| |/ _ \ / _ \ / _` | |/ _ \| |_) | | | |
+| |  | | (_) | (_) | (_| | |  __/|  __/| |_| |
+|_|  |_|\___/ \___/ \__,_|_|\___||_|    \__, |
+                                        |___/ 
+
+
+""")
 def ler_csv(caminho_csv):
     perguntas = {}
 
@@ -26,7 +36,7 @@ def ler_csv(caminho_csv):
                 #(ou seja a pergunta é outra) começa o registo de uma nova pergunta
                 perguntas[QuestionId] = {
                     "type": linha["type"],
-                    "difficulty": linha["dificultity"],
+                    "difficulty": linha["difficulty"],
                     "category": linha["category"],
                     "questiontext": linha["questiontext"],
                     "answers": []
@@ -36,5 +46,7 @@ def ler_csv(caminho_csv):
                 "text": linha["answer"],
                 "fraction": linha["fraction"]
             })
-
+        print(perguntas)
     return list(perguntas.values())
+
+ler_csv(caminho_csv)
