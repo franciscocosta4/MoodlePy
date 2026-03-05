@@ -1,65 +1,71 @@
 # MoodlePy
 
-This is a uni project developed in Python to make creating quizzes in Moodle a lot less painful.
+MoodlePy is a small Python tool that converts quiz questions stored in a CSV file into a **Moodle-compatible XML quiz file**.
 
-Instead of manually adding questions one by one through the Moodle interface, this tool:
-
-* Reads questions from a CSV file
-* Automatically fills in the Moodle form fields
-* Sends the POST request to create the questions
-
-Simple as that.
+Instead of manually creating questions through the Moodle interface, you can prepare them in a spreadsheet and generate the XML file that Moodle can import directly.
 
 ## Why?
 
-If you’ve ever created a big quiz in Moodle, you know it’s repetitive and time-consuming. This project was built to:
+Creating quizzes directly in Moodle can be slow and repetitive, especially when dealing with many questions.
 
-* Save time
-* Avoid copy-paste mistakes
-* Upload multiple questions at once
+This project was built to:
+
+* Create multiple Moodle questions quickly
+* Avoid manual input errors
+* Allow quizzes to be prepared using spreadsheets
+* Generate a Moodle XML file automatically
 
 ## How it works
 
-1. You prepare a CSV file with your questions.
-2. The script reads and processes the file.
-3. It fills in the required form inputs automatically.
-4. It submits the form to Moodle.
-
-No manual clicking required.
+1. Questions are written in a CSV file.
+2. The script reads and groups rows that belong to the same question.
+3. It converts the data into the correct Moodle XML structure.
+4. The resulting XML file can be imported into Moodle.
 
 ## CSV Structure
 
-Each row in the CSV represents one question.
+Each row in the CSV represents **one answer option** of a question.
 
-Typical fields include:
+Example:
 
-* Question name
-* Question text
-* Answer options
-* Correct answer
-* Feedback (optional)
-* Question type
+```
+id;type;dificultity;category;questiontext;answer;fraction
+Q1;multichoice;facil;Funcoes;O que faz criar_ficheiro()?;Cria ficheiro;100
+Q1;multichoice;facil;Funcoes;O que faz criar_ficheiro()?;Lê ficheiro;0
+Q1;multichoice;facil;Funcoes;O que faz criar_ficheiro()?;Apaga ficheiro;0
+Q2;truefalse;facil;Funcoes;A função open() pode criar ficheiro.;true;100
+Q2;truefalse;facil;Funcoes;A função open() pode criar ficheiro.;false;-25
+```
 
-(Adjust this section to match your actual format.)
+Fields:
+
+* **id** – question identifier (used to group answers)
+* **type** – question type (`multichoice`, `truefalse`, etc.)
+* **difficulty** – question difficulty level
+* **category** – Moodle category
+* **questiontext** – text of the question
+* **answer** – answer option
+* **fraction** – score percentage for the answer
 
 ## Requirements
 
 * Python 3
-* Required libraries (e.g., `requests`)
-* Access to a Moodle account with permission to create questions
+* Standard Python libraries (`csv`, `xml.etree.ElementTree`)
+
+No external dependencies are required.
 
 ## How to use
 
-1. Prepare your CSV file.
-2. Configure the Moodle URL and login details in the script.
+1. Prepare a CSV file with your questions.
+2. Place it in the project directory.
 3. Run the script.
-4. Let it do the boring part for you.
+
+The program will generate a **Moodle-compatible XML file** containing the quiz questions.
+
+This file can then be imported through Moodle's **Quiz → Import → Moodle XML format** option.
 
 ## Notes
 
-* If Moodle’s form structure changes, the script may need adjustments.
-* This was developed for academic purposes.
-
----
-
-Se quiseres, posso torná-lo ainda mais informal — ou mais técnico — dependendo do tipo de professor que tens.
+* The CSV must follow the expected structure.
+* Questions are grouped using the `id` field.
+* This project was developed as a university assignment.
