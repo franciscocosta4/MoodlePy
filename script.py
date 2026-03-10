@@ -3,6 +3,7 @@ from collections import defaultdict
 import xml.etree.ElementTree as ET
 
 caminho_csv = "perguntas.csv"
+caminho_output_xml = "quiz.xml"
 
 print(r"""
  __  __                 _ _       ____        
@@ -29,7 +30,7 @@ def ler_csv(caminho_csv):
     with open(caminho_csv, newline='', encoding="utf-8") as f:
         reader = csv.DictReader(f, delimiter=';') # ? define o delimitador como ;
 
-        for linha in reader: #? percorre cada linha do csv
+        for linha in reader: #? percorre cada linha do csv 
             QuestionId = linha["id"] # guarda o id da pergunta definido no inicio de cada linha 
 
             if QuestionId not in perguntas: # caso o id da pergunta ainda não foi registado
@@ -50,3 +51,10 @@ def ler_csv(caminho_csv):
     return list(perguntas.values())
 
 ler_csv(caminho_csv)
+
+
+def criar_xml(caminho_output_xml):
+    
+    root = ET.Element("quiz")
+
+    
