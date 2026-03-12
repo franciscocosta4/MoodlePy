@@ -1,6 +1,111 @@
 id;type;difficulty;category;questiontext;answer;fraction
-Q1;multichoice;1;Funcoes;O que faz criar_ficheiro()?;Cria ficheiro;100
-Q1;multichoice;1;Funcoes;O que faz criar_ficheiro()?;Lê ficheiro;0
-Q1;multichoice;1;Funcoes;O que faz criar_ficheiro()?;Apaga ficheiro;0
-Q2;truefalse;3;Funcoes;A função open() pode criar ficheiro.;true;100
-Q2;truefalse;3;Funcoes;A função open() pode criar ficheiro.;false;-25
+
+Q1;multichoice;1;Funcoes;O que faz a palavra-chave def em Python?;Define uma função;100
+Q1;multichoice;1;Funcoes;O que faz a palavra-chave def em Python?;Cria uma variável;0
+Q1;multichoice;1;Funcoes;O que faz a palavra-chave def em Python?;Inicia um ciclo;0
+
+Q2;multichoice;1;Funcoes;Qual símbolo termina a definição de uma função em Python?;:;100
+Q2;multichoice;1;Funcoes;Qual símbolo termina a definição de uma função em Python?;;0
+Q2;multichoice;1;Funcoes;Qual símbolo termina a definição de uma função em Python?;.;0
+
+Q3;multichoice;1;Funcoes;Qual palavra é usada para devolver um valor numa função?;return;100
+Q3;multichoice;1;Funcoes;Qual palavra é usada para devolver um valor numa função?;print;0
+Q3;multichoice;1;Funcoes;Qual palavra é usada para devolver um valor numa função?;break;0
+
+Q4;truefalse;1;Funcoes;Uma função pode ser chamada várias vezes.;true;100
+Q4;truefalse;1;Funcoes;Uma função pode ser chamada várias vezes.;false;-25
+
+Q5;multichoice;1;Funcoes;Como se chama uma função chamada soma?;soma();100
+Q5;multichoice;1;Funcoes;Como se chama uma função chamada soma?;call soma;0
+Q5;multichoice;1;Funcoes;Como se chama uma função chamada soma?;run soma();0
+
+Q6;truefalse;1;Funcoes;Funções ajudam a reutilizar código.;true;100
+Q6;truefalse;1;Funcoes;Funções ajudam a reutilizar código.;false;-25
+
+Q7;multichoice;1;Funcoes;Qual destas é uma função embutida do Python?;print();100
+Q7;multichoice;1;Funcoes;Qual destas é uma função embutida do Python?;display();0
+Q7;multichoice;1;Funcoes;Qual destas é uma função embutida do Python?;show();0
+
+Q8;truefalse;1;Funcoes;Uma função pode não devolver valor.;true;100
+Q8;truefalse;1;Funcoes;Uma função pode não devolver valor.;false;-25
+
+Q9;multichoice;1;Funcoes;Qual destas palavras é usada numa função?;return;100
+Q9;multichoice;1;Funcoes;Qual destas palavras é usada numa função?;loop;0
+Q9;multichoice;1;Funcoes;Qual destas palavras é usada numa função?;repeat;0
+
+Q10;truefalse;1;Funcoes;Uma função pode receber parâmetros.;true;100
+Q10;truefalse;1;Funcoes;Uma função pode receber parâmetros.;false;-25
+
+
+Q11;multichoice;2;Funcoes;O que é um parâmetro numa função?;Valor recebido pela função;100
+Q11;multichoice;2;Funcoes;O que é um parâmetro numa função?;Uma biblioteca;0
+Q11;multichoice;2;Funcoes;O que é um parâmetro numa função?;Um ficheiro;0
+
+Q12;multichoice;2;Funcoes;Qual é o resultado de uma função sem return?;None;100
+Q12;multichoice;2;Funcoes;Qual é o resultado de uma função sem return?;0;0
+Q12;multichoice;2;Funcoes;Qual é o resultado de uma função sem return?;Erro;0
+
+Q13;truefalse;2;Funcoes;Uma função pode receber vários parâmetros.;true;100
+Q13;truefalse;2;Funcoes;Uma função pode receber vários parâmetros.;false;-25
+
+Q14;multichoice;2;Funcoes;Qual destas opções define corretamente uma função?;def soma(a,b):;100
+Q14;multichoice;2;Funcoes;Qual destas opções define corretamente uma função?;function soma(a,b);0
+Q14;multichoice;2;Funcoes;Qual destas opções define corretamente uma função?;define soma(a,b);0
+
+Q15;multichoice;2;Funcoes;Qual é a principal vantagem das funções?;Reutilização de código;100
+Q15;multichoice;2;Funcoes;Qual é a principal vantagem das funções?;Aumentar memória;0
+Q15;multichoice;2;Funcoes;Qual é a principal vantagem das funções?;Eliminar variáveis;0
+
+Q16;truefalse;2;Funcoes;Uma função pode chamar outra função.;true;100
+Q16;truefalse;2;Funcoes;Uma função pode chamar outra função.;false;-25
+
+Q17;multichoice;2;Funcoes;Qual destas funções converte texto para número inteiro?;int();100
+Q17;multichoice;2;Funcoes;Qual destas funções converte texto para número inteiro?;str();0
+Q17;multichoice;2;Funcoes;Qual destas funções converte texto para número inteiro?;floatstr();0
+
+Q18;truefalse;2;Funcoes;Parâmetros são definidos na declaração da função.;true;100
+Q18;truefalse;2;Funcoes;Parâmetros são definidos na declaração da função.;false;-25
+
+Q19;multichoice;2;Funcoes;Qual função mostra texto no ecrã?;print();100
+Q19;multichoice;2;Funcoes;Qual função mostra texto no ecrã?;show();0
+Q19;multichoice;2;Funcoes;Qual função mostra texto no ecrã?;display();0
+
+Q20;truefalse;2;Funcoes;Uma função pode devolver um valor calculado.;true;100
+Q20;truefalse;2;Funcoes;Uma função pode devolver um valor calculado.;false;-25
+
+
+Q21;multichoice;3;Funcoes;O que acontece se uma função for chamada com menos argumentos que os parâmetros definidos?;Erro;100
+Q21;multichoice;3;Funcoes;O que acontece se uma função for chamada com menos argumentos que os parâmetros definidos?;Executa parcialmente;0
+Q21;multichoice;3;Funcoes;O que acontece se uma função for chamada com menos argumentos que os parâmetros definidos?;Ignora parâmetros;0
+
+Q22;truefalse;3;Funcoes;Uma função pode devolver vários valores.;true;100
+Q22;truefalse;3;Funcoes;Uma função pode devolver vários valores.;false;-25
+
+Q23;multichoice;3;Funcoes;Qual destas permite definir valor padrão num parâmetro?;def soma(a=0);100
+Q23;multichoice;3;Funcoes;Qual destas permite definir valor padrão num parâmetro?;def soma(a);0
+Q23;multichoice;3;Funcoes;Qual destas permite definir valor padrão num parâmetro?;def soma(a->0);0
+
+Q24;multichoice;3;Funcoes;Qual função mostra documentação de outra função?;help();100
+Q24;multichoice;3;Funcoes;Qual função mostra documentação de outra função?;info();0
+Q24;multichoice;3;Funcoes;Qual função mostra documentação de outra função?;doc();0
+
+Q25;multichoice;3;Funcoes;Qual conceito permite uma função chamar-se a si própria?;Recursividade;100
+Q25;multichoice;3;Funcoes;Qual conceito permite uma função chamar-se a si própria?;Iteração;0
+Q25;multichoice;3;Funcoes;Qual conceito permite uma função chamar-se a si própria?;Encapsulamento;0
+
+Q26;truefalse;3;Funcoes;Funções podem devolver tuplos.;true;100
+Q26;truefalse;3;Funcoes;Funções podem devolver tuplos.;false;-25
+
+Q27;multichoice;3;Funcoes;Qual destas estruturas permite definir funções anónimas?;lambda;100
+Q27;multichoice;3;Funcoes;Qual destas estruturas permite definir funções anónimas?;func;0
+Q27;multichoice;3;Funcoes;Qual destas estruturas permite definir funções anónimas?;define;0
+
+Q28;truefalse;3;Funcoes;Uma função lambda pode ter apenas uma expressão.;true;100
+Q28;truefalse;3;Funcoes;Uma função lambda pode ter apenas uma expressão.;false;-25
+
+Q29;multichoice;3;Funcoes;Qual destas permite importar funções de outro módulo?;import;100
+Q29;multichoice;3;Funcoes;Qual destas permite importar funções de outro módulo?;include;0
+Q29;multichoice;3;Funcoes;Qual destas permite importar funções de outro módulo?;require;0
+
+Q30;truefalse;3;Funcoes;Funções podem estar dentro de outras funções.;true;100
+Q30;truefalse;3;Funcoes;Funções podem estar dentro de outras funções.;false;-25
