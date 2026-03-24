@@ -15,8 +15,9 @@ print(r"""
 
 
 """)
+perguntas = {}
 def ler_csv(caminho_csv):
-    perguntas = {}
+    
 
     #perguntas é um dicionário, ou seja vai ter esta estrutura :
 #     perguntas = {
@@ -26,7 +27,7 @@ def ler_csv(caminho_csv):
 #         "answers": []
 #     }
 # }
-
+    
     with open(caminho_csv, newline='', encoding="utf-8") as f:
         reader = csv.DictReader(f, delimiter=';') # ? define o delimitador como ;
 
@@ -47,14 +48,38 @@ def ler_csv(caminho_csv):
                 "text": linha["answer"],
                 "fraction": linha["fraction"]
             })
-        print(perguntas)
+        print("\n", perguntas)
     return list(perguntas.values())
 
-ler_csv(caminho_csv)
 
-
-def criar_xml(caminho_output_xml):
+def criar_xml(perguntas, caminho_output_xml):
+    total_perguntas = len(perguntas)
+    print( "TOTAL DE PERGUNTAS:", total_perguntas)
     
     root = ET.Element("quiz")
+    def adicionarpergunta(p): 
+        
+        question = ET.SubElement(root, "question", type =p["type"])
+        
+        #name
+        name = ET.SubElement(question, "name")
+        ET.SubElement(name,"text").text = p["questiontext"][:50]
+
+        questiontext= ET.SubElement(question, "questiontext" ,format = "html")
+        ET.SubElement(questiontext, "text").text = f"<![CDATA[{p['questiontext']}]]>"
+
+
+    for p in perguntas:
+        adicionarpergunta(p)
+    
+    tree = ET.ElementTree(root)
+    tree.write(caminho_output_xml, encoding="utf-8", xml_declaration=True)
+    print(f"XML criado em: {caminho_output_xml}")
+
+
+perguntas = ler_csv(caminho_csv)    
+criar_xml(perguntas, caminho_output_xml)
+    
+
 
     
