@@ -66,8 +66,17 @@ def criar_xml(perguntas, caminho_output_xml):
         ET.SubElement(name,"text").text = p["questiontext"][:50]
 
         questiontext= ET.SubElement(question, "questiontext" ,format = "html")
-        ET.SubElement(questiontext, "text").text = f"<![CDATA[{p['questiontext']}]]>"
+        text_element = ET.SubElement(questiontext, "text")
+        text_element.text = p["questiontext"]
 
+        ET.SubElement(question, "shuffleanswers").text = "true"
+        
+        # <answer>
+        for ans in p["answers"]:
+            answer = ET.SubElement(question, "answer", fraction=str(ans["fraction"]))
+            
+            answer_text = ET.SubElement(answer, "text")
+            answer_text.text = ans["text"]  # sem CDATA
 
     for p in perguntas:
         adicionarpergunta(p)
